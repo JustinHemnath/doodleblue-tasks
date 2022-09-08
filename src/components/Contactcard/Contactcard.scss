@@ -1,0 +1,61 @@
+@import 'style';
+
+.Contactcard {
+  width: 60em;
+  background-color: whitesmoke;
+  border: 1px solid none;
+  border-radius: 10px;
+  padding: 1.3em 1em;
+  height: 5.5em;
+  overflow-y: hidden;
+  transition: height 0.3s;
+  color: $blue;
+
+  .topPart {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 900;
+      margin-top: 0.5em;
+    }
+    .buttons {
+      button {
+        background-color: rgb(244, 255, 92);
+        margin-right: 5px;
+        font-weight: 600;
+        border: none;
+        width: 9em;
+        height: 2.5em;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+      button:nth-of-type(2) {
+        width: 5em;
+        margin: 0;
+      }
+    }
+  }
+
+  .bottompart {
+    border-top: 3px solid $blue;
+    margin: 1.5em 0;
+    p {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    span {
+      text-decoration: underline;
+      margin-right: 10px;
+    }
+    .bottompartFirst {
+      display: flex;
+      justify-content: space-between;
+    }
+    .bottompartSecond {
+      display: flex;
+      justify-content: start;
+    }
+  }
+}

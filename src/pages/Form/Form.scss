@@ -1,0 +1,76 @@
+@import 'style';
+
+.contactform {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2em;
+    background-color: $blue;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px grey;
+    height: 40em;
+    width: 50em;
+    padding: 3em 0;
+
+    .heading {
+      h1 {
+        margin-bottom: 10px;
+        color: white;
+      }
+      .underline {
+        width: 15em;
+        background-color: white;
+        height: 3px;
+      }
+    }
+
+    input {
+      width: 25em;
+      height: 2em;
+      font-size: 1.5rem;
+      border: none;
+      border-bottom: 1px solid white;
+      border-radius: 5px;
+      background-color: $blue;
+      color: white;
+      outline: none !important;
+
+      &:focus {
+        background-color: $blue;
+      }
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    button,
+    .backButton {
+      font-size: 1.5rem;
+      height: 2em;
+      width: 25em;
+      font-weight: bold;
+      color: $blue;
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .backButton {
+      height: 1.3em;
+      padding: 0.2em;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import './App.css';
 import Homepage from './pages/Homepage/Homepage';
 import Profile from './pages/Profile/Profile';
 import Form from './pages/Form/Form';
+import Chatroom from './pages/Chatroom/Chatroom';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route index element={<Homepage />} />
           <Route path="profile" element={<Profile />} />
           <Route path="form" element={<Form />} />
+          <Route path="chatroom" element={<Chatroom />} />
         </Route>
       </Routes>
     </BrowserRouter>

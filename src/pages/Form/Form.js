@@ -39,19 +39,16 @@ const Form = () => {
           <div className="underline"></div>
         </div>
         <input
-          type="text"
           name="name"
           placeholder="Enter your name"
           {...register('name')}
         />
         <input
-          type="email"
           name="email"
           placeholder="Enter your email"
           {...register('email')}
         />
         <input
-          type="text"
           name="company"
           placeholder="Enter your company name"
           {...register('company')}

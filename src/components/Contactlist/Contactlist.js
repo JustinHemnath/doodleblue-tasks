@@ -1,39 +1,40 @@
 import './Contactlist.scss';
 import { useSelector } from 'react-redux';
 import Contactcard from '../Contactcard/Contactcard';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Contactlist = () => {
-  const contact = useSelector((store) => store.contact);
-  const [list, setlist] = useState(contact);
-
-  // useEffect(() => {
-  //   if (list === []) {
-  //     setListValid(!);
-  //   }
-  // }, [list]);
+  const contacts = useSelector((store) => store.contacts);
 
   return (
     <div className="Contactlist">
-      {list !== [] ? (
+      {contacts.length === 0 ? (
         <h1>
-          You have no contacts in your list. Click the Add Contact button to add
-          contacts
+          You have no contacts in your list. <br />
+          <br /> Click the 'Add Contact' button to add contacts.
         </h1>
       ) : (
-        contact.map((item) => {
+        contacts.map((item) => {
+          const { id, name, email, company, tel } = item;
           return (
             <Contactcard
-              key={item.id}
-              name={item.name}
-              email={item.email}
-              company={item.company}
-              tel={item.tel}
-              id={item.id}
+              key={id}
+              name={name}
+              email={email}
+              company={company}
+              tel={tel}
+              id={id}
             />
           );
         })
+      )}
+
+      {contacts.length > 1 ? (
+        <Link to="chatroom" className="openchat">
+          OPEN CHAT
+        </Link>
+      ) : (
+        <h1>You need to add atleast 2 contacts to create a new chat session</h1>
       )}
     </div>
   );

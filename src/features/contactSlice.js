@@ -4,11 +4,11 @@ const getLocalStorage = () => {
   const contactStorageData = localStorage.getItem('contactStorageData');
   if (contactStorageData) {
     return JSON.parse(contactStorageData);
-  } else return null;
+  } else return [];
 };
 
 const contactSlice = createSlice({
-  name: 'contact',
+  name: 'contacts',
   initialState: getLocalStorage(),
   reducers: {
     ADD_CONTACT: (state, { payload }) => {
@@ -18,7 +18,7 @@ const contactSlice = createSlice({
     },
 
     DELETE_CONTACT: (state, { payload }) => {
-      let newState = state.filter((item) => item.id != payload);
+      let newState = state.filter((item) => item.id !== payload);
       localStorage.setItem('contactStorageData', JSON.stringify(newState));
       return newState;
     },

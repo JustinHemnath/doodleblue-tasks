@@ -1,0 +1,14 @@
+@import 'style';
+
+.Chatroom {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+
+  .chatbox {
+    height: 50%;
+    width: 50%;
+    border: 1px solid red;
+  }
+}

@@ -6,6 +6,7 @@ const Homepage = () => {
   return (
     <main>
       <header>Doodleblue Task</header>
+      <p className="contactHeading">CONTACTS</p>
       <Contactlist />
       <Link to="form" className="addContact">
         Add Contact

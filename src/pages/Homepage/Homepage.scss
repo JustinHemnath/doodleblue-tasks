@@ -11,6 +11,14 @@ main {
     position: relative;
   }
 
+  .contactHeading {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    color: $blue;
+    margin-top: 1em;
+  }
+
   .addContact {
     background-color: rgb(244, 255, 92);
     font-weight: 600;

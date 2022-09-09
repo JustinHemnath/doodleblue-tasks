@@ -6,23 +6,15 @@ import { useDispatch } from 'react-redux';
 
 const Contactcard = ({ name, email, company, tel, id }) => {
   const [view, setView] = useState(true);
-  const divRef = useRef();
   const dispatch = useDispatch();
 
-  const toggleContact = () => {
-    setView(!view);
-    if (view) {
-      divRef.current.style.height = '15em';
-    } else divRef.current.style.height = '5.5em';
-  };
-
   return (
-    <div className="Contactcard" ref={divRef}>
+    <div className="Contactcard" style={{ height: view ? '5.5em' : '15em' }}>
       <div className="topPart">
         <img src={logo} width="75" height="75" />
         <h1>{name}</h1>
         <div className="buttons">
-          <button onClick={() => toggleContact()}>
+          <button onClick={() => setView(!view)}>
             {view ? 'Show Contact' : 'Hide Contact'}
           </button>
           <button

@@ -1,3 +1,3 @@
-#Contact List App with CRUD operation
+# Contact List App with CRUD operation
 
-Created using Redux
+Created using ReactJs and Redux
